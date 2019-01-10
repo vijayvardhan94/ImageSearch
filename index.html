@@ -20,19 +20,19 @@
     
     <!-- TITLE BLOCK -->
     <div class="row">
-      <h1 class="center">Flickr Search</h1>
+      <h1 class="center">ImageSearch</h1>
     </div>
       
     <!-- SEARCH BLOCK -->
     <div class="row">
       <div class="one-half column offset-by-three">
-        <input type="text" v-model="query" debounce="500" class="u-full-width" placeholder="Enter your search string..." />
+        <input type="text" v-model="query" debounce="500" class="u-full-width" placeholder="type text here to search" />
       </div>
     </div>
     
     <!-- RESULTS BLOCK -->
     <div class="row">
-      <div id="no-results" v-show="images.length < 1"><p class="center">Your results will appear here</p></div>
+      <div id="no-results" v-show="images.length < 1"><p class="center">View Images Below</p></div>
       <div id="loading"></div>
       <div id="search-results">
           <div class="flickr-image" v-for="image in images">
