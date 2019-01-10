@@ -1,0 +1,37 @@
+<div id="main-container" class="container">
+    
+    <!-- TITLE BLOCK -->
+    <div class="row">
+      <h1 class="center">Image Search</h1>
+    </div>
+      
+    <!-- SEARCH BLOCK -->
+    <div class="row">
+      <div class="one-half column offset-by-three">
+        <input type="text" v-model="query" debounce="500" class="u-full-width" placeholder="Enter your search string..." />
+      </div>
+    </div>
+    
+    <!-- RESULTS BLOCK -->
+    <div class="row">
+      <div id="no-results" v-show="images.length < 1"><p class="center">View Images Below</p></div>
+      <div id="loading"></div>
+      <div id="search-results">
+          <div class="flickr-image" v-for="image in images">
+            <div class="thumbnail">
+              <a :href="image.link" target="_blank">
+                <img src="http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif" style="width: 100%;" v-img="image.media.m">
+              </a>
+            </div>
+            <div class="author">
+              <a :href="image.link" target="_blank">{{ image.author }}</a>
+            </div>
+            <div class="tags" v-if="image.tags">
+              <div class="tag" v-for="tag in filters.splitTags(image.tags)">{{ tag }}</div>
+            </div>
+          </div>
+      </div>
+    </div>
+    
+    <!-- END OF PAGE -->
+  </div>

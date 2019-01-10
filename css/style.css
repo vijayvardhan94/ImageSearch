@@ -1,0 +1,52 @@
+/* variables */
+/* styles */
+.author {
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+.author a {
+  color: #222222;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.author a:hover {
+  color: #128fdc;
+}
+.tag {
+  float: left;
+  margin: 2px;
+  color: #128fdc;
+  border: 1px solid #128fdc;
+  padding: 0.15rem 0.3rem;
+  border-radius: 5px;
+}
+.tag:hover {
+  background-color: #128fdc;
+  color: white;
+}
+#search-results {
+  -moz-column-width: 13em;
+  -webkit-column-width: 13em;
+  column-width: 13em;
+  -moz-column-gap: 1em;
+  -webkit-column-gap: 1em;
+  column-gap: 1em;
+}
+#search-results .flickr-image {
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 1rem;
+  width: 100%;
+  background: #efefef;
+}
+/* utilities */
+.center {
+  text-align: center;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box !important;
+}
